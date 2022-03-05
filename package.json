@@ -2,7 +2,7 @@
   "name": "jsexecise",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/zxxia2016/JsExecise/issues"
   },
-  "homepage": "https://github.com/zxxia2016/JsExecise#readme"
+  "homepage": "https://github.com/zxxia2016/JsExecise#readme",
+  "dependencies": {
+    "http": "^0.0.1-security"
+  }
 }
