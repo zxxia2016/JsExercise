@@ -1,4 +1,3 @@
-
 console.log(`start app`);
 
 // start app >> end app >> timeout >> then
@@ -14,7 +13,7 @@ new Promise((resolve, reject) => {
 
 // 执行异步队列任务
 
-let f1 = function () {
+let f1 = function() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             console.log(`f1`);
@@ -23,7 +22,7 @@ let f1 = function () {
     });
 };
 
-let f2 = function () {
+let f2 = function() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             console.log(`f2`);
@@ -32,7 +31,7 @@ let f2 = function () {
     });
 };
 
-let f3 = function () {
+let f3 = function() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             console.log(`f3`);
@@ -55,7 +54,17 @@ promise_queue(plist);
 
 console.log(`end app`);
 
+let f4 = function() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log(`f4`);
+            resolve();
+        }, 5000);
+    });
+};
 
-
-
-
+async function waitFuc() {
+    await f4();
+    console.log(`end app1`);
+}
+waitFuc();
