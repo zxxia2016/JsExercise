@@ -16,3 +16,20 @@ let str1 = "/resources/images/beauty.jpg";
 const re = str1.match(/.*\/.*\/(.*\..*)/);
 console.log(re[1]);
 
+
+const strName = `"Nickname":"  ท้องฟ้าเวิ"`
+const search = `"Nickname":"`;
+const rrrr = strName.indexOf(search);
+const rrrrr = strName.indexOf(`"`, rrrr + search.length);
+const re1 = strName.substring(0, rrrr + search.length) + strName.substring(rrrrr, strName.length);
+const strName1 = `"Nickname":"  ท้องฟ้าเวิ้งว้า"`
+
+const strConfig = `GLOBAL_CONFIG.LogSwitch = true;11111`;
+const rrr = strConfig.match(/^\s?GLOBAL_CONFIG.LogSwitch\s?=\s?([a-z]+);\s?/);
+if (rrr) {
+    console.log(rrr[0]);
+    console.log(rrr[1]);
+
+}
+
+console.log(`-----------------------------`);
