@@ -17,9 +17,11 @@ function f1() {
     const p = new Promise((resolve, reject) => {
         setTimeout(() => {
             console.log(`timeout1`);
-            resolve();
+            reject();
         }, 3000);
     });
-    p.then(() => console.log(`done app1`));
+    p.then(() => console.log(`resolve`)).catch(() => {
+        console.log(`reject`)
+    });
 }
 f1();
