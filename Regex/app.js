@@ -32,4 +32,10 @@ if (rrr) {
 
 }
 
+const v = '%\{number\}'
+let phrase = `Quer ganhar %{number}+ por mês`;
+var replace = String.prototype.replace;
+phrase = replace.call(phrase, new RegExp(v, 'g'), '111');
+console.log(phrase);
+
 console.log(`-----------------------------`);
